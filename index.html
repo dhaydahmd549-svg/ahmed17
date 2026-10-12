@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https:; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https:; object-src 'none'; base-uri 'self';">
+    <meta name="description" content="الموقع الرسمي للمهندس أحمد ذايد - مهندس نظم معلومات وتكنولوجيا المعلومات، أخصائي تحليل البيانات والذكاء الاصطناعي وخريج نظم معلومات الأعمال (BIS).">
+    <meta name="keywords" content="أحمد ذايد, تحليل البيانات, Power BI, Tableau, Python, SQL Server, الذكاء الاصطناعي, نظم المعلومات, سيدي سالم, كفر الشيخ">
+    <meta name="author" content="أحمد ذايد">
+    <title>م. أحمد ذايد | مهندس نظم معلومات وأخصائي تحليل البيانات والذكاء الاصطناعي</title>
+    <!-- Framebusting Clickjacking Protection -->
+    <script>
+        if (window.top !== window.self) {
+            window.top.location = window.self.location;
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800&family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="glow-sphere sphere-1"></div>
+    <div class="glow-sphere sphere-2"></div>
+    <div class="glow-sphere sphere-3"></div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-icon"><i class="fa-solid fa-chart-line"></i></span>
+                <span class="logo-text">م. أحمد <span class="highlight">ذايد</span></span>
+                <span class="badge-verified" title="حساب موثق"><i class="fa-solid fa-circle-check"></i></span>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#hero" class="nav-link active"><i class="fa-solid fa-house"></i> <span data-i18n="nav-home">الرئيسية</span></a>
+                <a href="#about" class="nav-link"><i class="fa-solid fa-user"></i> <span data-i18n="nav-about">عني</span></a>
+                <a href="#skills" class="nav-link"><i class="fa-solid fa-laptop-code"></i> <span data-i18n="nav-skills">المهارات</span></a>
+                <a href="#projects" class="nav-link"><i class="fa-solid fa-diagram-project"></i> <span data-i18n="nav-projects">المشاريع والأعمال</span></a>
+                <a href="#analytics-demo" class="nav-link"><i class="fa-solid fa-chart-pie"></i> <span data-i18n="nav-analytics">لوحة التحليلات</span></a>
+                <a href="#services" class="nav-link"><i class="fa-solid fa-briefcase"></i> <span data-i18n="nav-services">الخدمات</span></a>
+                <a href="#contact" class="nav-link"><i class="fa-solid fa-envelope"></i> <span data-i18n="nav-contact">تواصل معي</span></a>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Language Toggle Button -->
+                <button class="btn btn-lang-toggle" id="langToggleBtn" title="Switch Language / تغيير اللغة">
+                    <i class="fa-solid fa-globe"></i>
+                    <span id="langBtnText">English</span>
+                </button>
+                <button class="hamburger-btn" id="hamburgerBtn" aria-label="قائمة التصفح" aria-expanded="false" aria-controls="navMenu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="pulse-dot"></span>
+                        <span data-i18n="hero-badge">متاح للأعمال والاستشارات والحلول الذكية</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        <span data-i18n="hero-title-1">مرحباً، أنا المهندس</span> <br>
+                        <span class="gradient-text" data-i18n="hero-title-2">أحمد ذايد</span>
+                    </h1>
+
+                    <h2 class="hero-subtitle">
+                        <span id="typing-text"></span><span class="typing-cursor">|</span>
+                    </h2>
+
+                    <p class="hero-description" data-i18n-html="hero-desc">
+                        خريج نظم معلومات الأعمال (BIS) بتقدير متميز. أتميز بالقدرة على استخلاص رؤى قابلة للتنفيذ من بيانات الشركات الخام، وبناء تحليلات مرئية متطورة باستخدام <strong>Power BI</strong> و <strong>Tableau</strong> و <strong>Python</strong> لتوجيه القرارات الاستراتيجية واستغلال تقنيات <strong>الذكاء الاصطناعي</strong> والتنبؤ الإحصائي.
+                    </p>
+
+                    <div class="hero-specs-grid">
+                        <div class="spec-card">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <div class="spec-info">
+                                <span class="spec-label" data-i18n="spec-label-1">المؤهل الدراسي</span>
+                                <span class="spec-value" data-i18n="spec-val-1">خريج نظم معلومات الأعمال</span>
+                            </div>
+                        </div>
+                        <div class="spec-card">
+                            <i class="fa-solid fa-cake-candles"></i>
+                            <div class="spec-info">
+                                <span class="spec-label" data-i18n="spec-label-2">العمر</span>
+                                <span class="spec-value" data-i18n="spec-val-2">22 سنة</span>
+                            </div>
+                        </div>
+                        <div class="spec-card">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div class="spec-info">
+                                <span class="spec-label" data-i18n="spec-label-3">الموقع</span>
+                                <span class="spec-value" data-i18n="spec-val-3">مصر - كفر الشيخ - سيدي سالم</span>
+                            </div>
+                        </div>
+                        <div class="spec-card highlight-card">
+                            <i class="fa-solid fa-phone-volume"></i>
+                            <div class="spec-info">
+                                <span class="spec-label" data-i18n="spec-label-4">تواصل مباشر</span>
+                                <span class="spec-value">01227036251</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-buttons">
+                        <a href="https://wa.me/201227036251?text=مرحباً%20م.%20أحمد%20ذايد،%20أود%20مناقشة%20مشروع%20جديد" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-hero">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span data-i18n="btn-wa-hero">تواصل عبر الواتساب</span>
+                        </a>
+                        <a href="https://t.me/+201227036251" target="_blank" rel="noopener noreferrer" class="btn btn-telegram-hero">
+                            <i class="fa-brands fa-telegram"></i>
+                            <span data-i18n="btn-tg-hero">تواصل عبر التليجرام</span>
+                        </a>
+                        <a href="#analytics-demo" class="btn btn-glass-hero">
+                            <i class="fa-solid fa-chart-column"></i>
+                            <span data-i18n="btn-analytics">عرض لوحة التحليلات الحية</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="avatar-card-wrapper">
+                        <div class="avatar-card-inner">
+                            <div class="avatar-header">
+                                <div class="avatar-glow-ring">
+                                    <div class="avatar-photo-wrapper">
+                                        <img src="assets/profile.jpg" alt="المهندس أحمد ذايد" class="avatar-profile-img">
+                                    </div>
+                                </div>
+                                <h3>م. أحمد ذايد</h3>
+                                <p>Information Systems & Data Specialist</p>
+                            </div>
+
+                            <div class="stats-mini-container">
+                                <div class="mini-stat">
+                                    <span class="stat-number">100%</span>
+                                    <span class="stat-title" data-i18n="stat-1">دقة القرارات</span>
+                                </div>
+                                <div class="mini-stat">
+                                    <span class="stat-number">BI & AI</span>
+                                    <span class="stat-title" data-i18n="stat-2">تحليل وتنبؤ</span>
+                                </div>
+                                <div class="mini-stat">
+                                    <span class="stat-number">24/7</span>
+                                    <span class="stat-title" data-i18n="stat-3">دعم وتواصل</span>
+                                </div>
+                            </div>
+
+                            <div class="code-snippet-box">
+                                <div class="box-bar">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                    <span class="box-title">Analytics_Pipeline.py</span>
+                                </div>
+                                <pre><code><span class="code-keyword">import</span> pandas <span class="code-keyword">as</span> pd
+<span class="code-keyword">from</span> ai_agent <span class="code-keyword">import</span> BusinessForecaster
+
+df = pd.read_sql(<span class="code-string">"SELECT * FROM Raw_Company_Data"</span>, engine)
+model = BusinessForecaster(agent=<span class="code-string">"Ahmed_AI"</span>)
+insights = model.extract_actionable_trends(df)
+print(<span class="code-string">"✅ Actionable Insights Generated!"</span>)</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section about-section" id="about">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag" data-i18n="about-tag">نبذة شخصية وأكاديمية</span>
+                    <h2 class="section-title"><span data-i18n="about-title">من هو المهندس</span> <span class="gradient-text">أحمد ذايد</span></h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-card glass-card">
+                        <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <h3 data-i18n="about-c1-title">المؤهل الأكاديمي والتخصص</h3>
+                        <p data-i18n-html="about-c1-desc">خريج <strong>نظم معلومات الأعمال (BIS)</strong>، يدمج التخصص بين الفهم العميق لمتطلبات نظم الأعمال الحديثة وتطبيقات تكنولوجيا المعلومات، مما يتيح التفاعل مع أعقد التحديات التقنية والإدارية بمرونة وكفاءة.</p>
+                    </div>
+                    <div class="about-card glass-card">
+                        <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+                        <h3 data-i18n="about-c2-title">تحليل البيانات وتوجيه قرارات الأعمال</h3>
+                        <p data-i18n="about-c2-desc">خبرة وكفاءة عالية في استخلاص رؤى استراتيجية قابلة للتنفيذ مباشرة من بيانات الشركات الخام، وتحويل الجداول الضخمة المعقدة إلى تحليلات مرئية تفاعلية وسهلة الفهم لقيادات الشركات.</p>
+                    </div>
+                    <div class="about-card glass-card">
+                        <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
+                        <h3 data-i18n="about-c3-title">الذكاء الاصطناعي والأنظمة الذكية</h3>
+                        <p data-i18n="about-c3-desc">تطبيق تقنيات التعلم الآلي والتنبؤ الإحصائي الحديث، بالإضافة إلى توجيه وكيل الذكاء الاصطناعي (AI Agent) لأتمتة تصنيف البيانات واستخراج الاتجاهات التاريخية العميقة.</p>
+                    </div>
+                </div>
+
+                <div class="info-strip glass-card">
+                    <div class="strip-item">
+                        <i class="fa-solid fa-user-large"></i>
+                        <div>
+                            <span class="strip-label" data-i18n="strip-l1">الاسم الكامل</span>
+                            <span class="strip-val" data-i18n="strip-v1">أحمد ذايد</span>
+                        </div>
+                    </div>
+                    <div class="strip-divider"></div>
+                    <div class="strip-item">
+                        <i class="fa-solid fa-cake-candles"></i>
+                        <div>
+                            <span class="strip-label" data-i18n="strip-l2">العمر</span>
+                            <span class="strip-val" data-i18n="strip-v2">22 سنة</span>
+                        </div>
+                    </div>
+                    <div class="strip-divider"></div>
+                    <div class="strip-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <span class="strip-label" data-i18n="strip-l3">العنوان والموقع</span>
+                            <span class="strip-val" data-i18n="strip-v3">مصر - كفر الشيخ - سيدي سالم</span>
+                        </div>
+                    </div>
+                    <div class="strip-divider"></div>
+                    <div class="strip-item">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <div>
+                            <span class="strip-label" data-i18n="strip-l4">الكلية والتخصص</span>
+                            <span class="strip-val" data-i18n="strip-v4">خريج نظم معلومات الأعمال (BIS)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section skills-section" id="skills">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag" data-i18n="skills-tag">القدرات التقنية</span>
+                    <h2 class="section-title" data-i18n="skills-title">مصفوفة المهارات والأدوات الاحترافية</h2>
+                    <p class="section-subtitle" data-i18n="skills-sub">منظومة شاملة تجمع بين تحليل البيانات، الذكاء الاصطناعي، البرمجة، والحلول المكتبية</p>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="skills-categories-grid">
+                    <!-- Category 1 -->
+                    <div class="skill-category-card glass-card">
+                        <div class="category-header">
+                            <div class="category-icon cyan-bg"><i class="fa-solid fa-chart-column"></i></div>
+                            <div>
+                                <h3 data-i18n="cat1-title">تحليل البيانات والقرارات الاستراتيجية</h3>
+                                <p data-i18n="cat1-sub">استخلاص الرؤى وبناء Dashboard تفاعلية</p>
+                            </div>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-head"><span>Power BI <span data-i18n="sk-pbi">(لوحات تحكم تفاعلية)</span></span><span>95%</span></div>
+                                <div class="progress-bar"><div class="progress" style="width: 95%;"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-head"><span>Tableau <span data-i18n="sk-tableau">(تجسيم وتحليل البيانات)</span></span><span>90%</span></div>
+                                <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-head"><span>Excel <span data-i18n="sk-excel">(المتقدم والماكرو)</span></span><span>98%</span></div>
+                                <div class="progress-bar"><div class="progress" style="width: 98%;"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-head"><span>Python Pandas <span data-i18n="sk-python">(معالجة البيانات الخام)</span></span><span>92%</span></div>
+                                <div class="progress-bar"><div class="progress" style="width: 92%;"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-head"><span>SQL Server <span data-i18n="sk-sql">(قواعد البيانات)</span></span><span>88%</span></div>
+                                <div class="progress-bar"><div class="progress" style="width: 88%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category 2 -->
+                    <div class="skill-category-card glass-card">
+                        <div class="category-header">
+                            <div class="category-icon purple-bg"><i class="fa-solid fa-robot"></i></div>
+                            <div>
+                                <h3 data-i18n="cat2-title">الذكاء الاصطناعي والأنظمة الذكية</h3>
+                                <p data-i18n="cat2-sub">التعلم الآلي، التنبؤ الإحصائي، وتوجيه وكلاء الذكاء الاصطناعي</p>
+                            </div>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-head"><span data-i18n="sk-ai-agent">توجيه وكيل الذكاء الاصطناعي (AI Agent Prompting)</span><span>96%</span></div>
+                                <div class="progress-bar"><div class="progress purple-bar" style="width: 96%;"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-head"><span data-i18n="sk-ml">التعلم الآلي (Machine Learning)</span><span>85%</span></div>
+                                <div class="progress-bar"><div class="progress purple-bar" style="width: 85%;"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-head"><span data-i18n="sk-forecast">التنبؤ الإحصائي (Statistical Forecasting)</span><span>90%</span></div>
+                                <div class="progress-bar"><div class="progress purple-bar" style="width: 90%;"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-head"><span data-i18n="sk-automate">أتمتة التصنيفات المعقدة للبيانات</span><span>93%</span></div>
+                                <div class="progress-bar"><div class="progress purple-bar" style="width: 93%;"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-head"><span data-i18n="sk-trends">تحليل الاتجاهات التاريخية العميقة</span><span>94%</span></div>
+                                <div class="progress-bar"><div class="progress purple-bar" style="width: 94%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category 3 -->
+                    <div class="skill-category-card glass-card">
+                        <div class="category-header">
+                            <div class="category-icon emerald-bg"><i class="fa-solid fa-code"></i></div>
+                            <div>
+                                <h3 data-i18n="cat3-title">تطوير واجهات الويب (Web UI)</h3>
+                                <p data-i18n="cat3-sub">بناء موقع وتجارب مستخدم عصرية وسريعة</p>
+                            </div>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-head"><span>HTML5 <span data-i18n="sk-html">(هيكلة الصفحات)</span></span><span>95%</span></div>
+                                <div class="progress-bar"><div class="progress emerald-bar" style="width: 95%;"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-head"><span>CSS3 & Modern Layouts <span data-i18n="sk-css">(Flexbox/Grid/Glow)</span></span><span>90%</span></div>
+                                <div class="progress-bar"><div class="progress emerald-bar" style="width: 90%;"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-head"><span>JavaScript <span data-i18n="sk-js">(التفاعلية والمنطق)</span></span><span>88%</span></div>
+                                <div class="progress-bar"><div class="progress emerald-bar" style="width: 88%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category 4 -->
+                    <div class="skill-category-card glass-card">
+                        <div class="category-header">
+                            <div class="category-icon amber-bg"><i class="fa-solid fa-file-invoice"></i></div>
+                            <div>
+                                <h3 data-i18n="cat4-title">حزمة برامج الأوفيس والتنفيذ</h3>
+                                <p data-i18n="cat4-sub">إعداد التقارير والعروض التقديمية الاحترافية</p>
+                            </div>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-head"><span>Excel <span data-i18n="sk-excel-adv">(المتقدم والدوال المعقدة)</span></span><span>98%</span></div>
+                                <div class="progress-bar"><div class="progress amber-bar" style="width: 98%;"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-head"><span>PowerPoint <span data-i18n="sk-ppt">(العروض التقديمية للأعمال)</span></span><span>92%</span></div>
+                                <div class="progress-bar"><div class="progress amber-bar" style="width: 92%;"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-head"><span>Word <span data-i18n="sk-word">(التقارير والمستندات الرسمية)</span></span><span>95%</span></div>
+                                <div class="progress-bar"><div class="progress amber-bar" style="width: 95%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Showcase Section -->
+        <section class="section projects-section" id="projects">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag" data-i18n="proj-tag">معرض الأعمال والأنظمة</span>
+                    <h2 class="section-title"><span data-i18n="proj-title">المشاريع البارزة و</span> <span class="gradient-text" data-i18n="proj-title-hl">الأنظمة الرقمية</span></h2>
+                    <p class="section-subtitle" data-i18n="proj-sub">نماذج عملية تم تصميمها وتطويرها لتوفير حلول استثمارية وتحليلية ذكية متكاملة</p>
+                    <div class="title-underline"></div>
+                </div>
+
+                <!-- Featured Project: Invest Pro -->
+                <div class="featured-project-card glass-card">
+                    <div class="project-badge-bar">
+                        <span class="status-badge live-badge"><i class="fa-solid fa-circle-dot"></i> <span data-i18n="proj-badge-flagship">مشروع رئيسي مميز (Flagship Project)</span></span>
+                        <div class="project-tags">
+                            <span class="tech-tag">FinTech Platform</span>
+                            <span class="tech-tag">HTML5 / CSS3 / JS</span>
+                            <span class="tech-tag">PHP / SQL Server</span>
+                            <span class="tech-tag">Chart.js Analytics</span>
+                        </div>
+                    </div>
+
+                    <div class="project-main-grid">
+                        <!-- Project Visual & Gallery -->
+                        <div class="project-visual-col">
+                            <div class="project-screen-frame">
+                                <div class="screen-top-bar">
+                                    <span class="frame-dot close"></span>
+                                    <span class="frame-dot min"></span>
+                                    <span class="frame-dot max"></span>
+                                    <span class="frame-url"><i class="fa-solid fa-lock"></i> investpro-platform.local</span>
+                                </div>
+                                <div class="main-preview-container">
+                                    <img src="assets/projects/investpro/investpro-home.png" alt="منصة إنفست برو" id="investProMainImg" class="project-main-screen">
+                                    <div class="screen-overlay-info">
+                                        <span id="screenCaption" data-i18n="proj-cap-1">الواجهة الرئيسية: حاسبة العوائد التفاعلية والشعار</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Interactive Thumbnails Gallery -->
+                            <div class="project-gallery-thumbs" id="investProThumbs">
+                                <button class="thumb-btn active" data-img="assets/projects/investpro/investpro-home.png" data-caption-ar="الواجهة الرئيسية: حاسبة العوائد التفاعلية والشعار" data-caption-en="Home Interface: Interactive Returns Calculator & Hero">
+                                    <img src="assets/projects/investpro/investpro-home.png" alt="الرئيسية">
+                                    <span data-i18n="thumb-home">الرئيسية والعوائد</span>
+                                </button>
+                                <button class="thumb-btn" data-img="assets/projects/investpro/investpro-market.png" data-caption-ar="سوق الأسهم المصرية: مؤشرات التداول والتحليل الفوري" data-caption-en="Egyptian Stock Market: Live Trading Indicators & Quotations">
+                                    <img src="assets/projects/investpro/investpro-market.png" alt="سوق الأسهم">
+                                    <span data-i18n="thumb-stocks">سوق الأسهم</span>
+                                </button>
+                                <button class="thumb-btn" data-img="assets/projects/investpro/investpro-chart.png" data-caption-ar="التحليل الفني وأوامر الشراء: رسوم بيانية وتوصيات الخبراء" data-caption-en="Technical Chart & Buy Order Execution: Trends & Recommendations">
+                                    <img src="assets/projects/investpro/investpro-chart.png" alt="الرسم البياني">
+                                    <span data-i18n="thumb-chart">الشارت والأوامر</span>
+                                </button>
+                                <button class="thumb-btn" data-img="assets/projects/investpro/investpro-wallet.png" data-caption-ar="المحفظة الاستثمارية: الإيداع الفوري عبر فودافون كاش وإنستاباي" data-caption-en="Digital Wallet: Deposit via Vodafone Cash & InstaPay">
+                                    <img src="assets/projects/investpro/investpro-wallet.png" alt="المحفظة">
+                                    <span data-i18n="thumb-wallet">المحفظة والإيداع</span>
+                                </button>
+                                <button class="thumb-btn" data-img="assets/projects/investpro/investpro-tx.png" data-caption-ar="سجل العمليات المالية: تتبع صفقات البيع والشراء بالتاريخ والتوقيت" data-caption-en="Transaction History: Comprehensive Log of Buy & Sell Orders">
+                                    <img src="assets/projects/investpro/investpro-tx.png" alt="سجل العمليات">
+                                    <span data-i18n="thumb-tx">سجل المعاملات</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Project Information & Details -->
+                        <div class="project-details-col">
+                            <div class="project-title-area">
+                                <div class="proj-logo-chip">
+                                    <i class="fa-solid fa-arrow-trend-up"></i>
+                                    <span>INVEST PRO</span>
+                                </div>
+                                <h3 class="project-headline" data-i18n="proj-head">منصة إنفست برو (Invest Pro)</h3>
+                                <p class="project-tagline" data-i18n="proj-tagline">نظام ويب مالي متكامل لتداول الأسهم المصرية، حاسبة عوائد الاستثمار، وإدارة المحافظ الرقمية</p>
+                            </div>
+
+                            <p class="project-description-text" data-i18n="proj-desc">
+                                منصة استثمارية وتداولية متطورة تم بناؤها وتصميمها كحل متكامل يدمج بين سهولة الاستخدام للمستثمر والتحليل المالي المتقدم للبيانات. تتضمن المنصة نظاماً ديناميكياً لحساب العوائد السنوية، سوقاً حياً للأسهم وصناديق الذهب، رسوماً بيانية تفاعلية لحركة الأسعار، ومحفظة متكاملة تدعم بوابات الدفع الإلكترونية المصرية (فودافون كاش وإنستاباي) وسجلاً تفصيلياً لكافة العمليات المالية.
+                            </p>
+
+                            <!-- Key Pillars / Features -->
+                            <div class="project-pillars-grid">
+                                <div class="pillar-item">
+                                    <i class="fa-solid fa-calculator cyan-icon"></i>
+                                    <div>
+                                        <h4 data-i18n="pillar-1-t">حاسبة العوائد التفاعلية</h4>
+                                        <p data-i18n="pillar-1-d">سلايدر ديناميكي لحساب الأرباح السنوية المتوقعة بناءً على مبالغ الاستثمار ونسب الفائدة المخصصة.</p>
+                                    </div>
+                                </div>
+                                <div class="pillar-item">
+                                    <i class="fa-solid fa-chart-line purple-icon"></i>
+                                    <div>
+                                        <h4 data-i18n="pillar-2-t">سوق الأسهم والشارت الفني</h4>
+                                        <p data-i18n="pillar-2-d">عرض أسعار وتغيرات الأسهم المصرية (مثل COMI، فوري، أبو قير) مع رسوم بيانية تفاعلية وتنفيذ مباشر لأوامر الشراء.</p>
+                                    </div>
+                                </div>
+                                <div class="pillar-item">
+                                    <i class="fa-solid fa-wallet emerald-icon"></i>
+                                    <div>
+                                        <h4 data-i18n="pillar-3-t">إدارة المحفظة والمدفوعات</h4>
+                                        <p data-i18n="pillar-3-d">محفظة استثمارية متكاملة تدعم الإيداع عبر فودافون كاش وإنستاباي مع متابعة الرصيد المتاح وإجمالي المستثمر.</p>
+                                    </div>
+                                </div>
+                                <div class="pillar-item">
+                                    <i class="fa-solid fa-clock-rotate-left amber-icon"></i>
+                                    <div>
+                                        <h4 data-i18n="pillar-4-t">سجل المعاملات والتقارير</h4>
+                                        <p data-i18n="pillar-4-d">أرشيف دقيق ومؤتمت يسجل عمليات البيع والشراء بالتاريخ، التوقيت، الأسعار، وحالة كل صفقة استثمارية.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tech Stack Badges -->
+                            <div class="tech-stack-section">
+                                <span class="tech-stack-label" data-i18n="proj-stack-lbl">التقنيات المستخدمة في المشروع:</span>
+                                <div class="stack-badges">
+                                    <span class="badge-item"><i class="fa-brands fa-html5"></i> HTML5 Semantic</span>
+                                    <span class="badge-item"><i class="fa-brands fa-css3-alt"></i> Modern Dark UI & CSS3</span>
+                                    <span class="badge-item"><i class="fa-brands fa-js"></i> JavaScript ES6+</span>
+                                    <span class="badge-item"><i class="fa-solid fa-chart-pie"></i> Chart.js Analytics</span>
+                                    <span class="badge-item"><i class="fa-brands fa-php"></i> PHP Backend</span>
+                                    <span class="badge-item"><i class="fa-solid fa-database"></i> SQL Server / MySQL</span>
+                                </div>
+                            </div>
+
+                            <!-- Action Buttons -->
+                            <div class="project-action-buttons">
+                                <a href="http://localhost/investpro" target="_blank" rel="noopener noreferrer" class="btn btn-project-live">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> <span data-i18n="btn-open-proj">تشغيل المنصة / معاينة حية</span>
+                                </a>
+                                <a href="https://wa.me/201227036251?text=مرحباً%20م.%20أحمد،%20أعجبني%20مشروع%20منصة%20إنفست%20برو%20وأريد%20الاستفسار%20عن%20تفاصيل%20أو%20بناء%20نظام%20مماثل" target="_blank" rel="noopener noreferrer" class="btn btn-project-discuss">
+                                    <i class="fa-brands fa-whatsapp"></i> <span data-i18n="btn-discuss-proj">طلب نظام مماثل</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Analytics Dashboard Section -->
+        <section class="section analytics-section" id="analytics-demo">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag" data-i18n="analytics-tag">استعراض حي ملموس</span>
+                    <h2 class="section-title" data-i18n="analytics-title">لوحة تحليلات البيانات التفاعلية (BI Demo)</h2>
+                    <p class="section-subtitle" data-i18n="analytics-sub">نموذج حي يستعرض طريقة تحويل بيانات الشركات إلى رسومات بيانية ومؤشرات أداء لتوجيه القرارات</p>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="dashboard-window glass-card">
+                    <div class="dash-toolbar">
+                        <div class="dash-title">
+                            <i class="fa-solid fa-sliders"></i>
+                            <span data-i18n="dash-title">لوحة قيادة المبيعات والذكاء الاصطناعي - م. أحمد ذايد</span>
+                        </div>
+                        <div class="dash-controls">
+                            <button class="filter-btn active" data-dataset="revenue">
+                                <i class="fa-solid fa-chart-line"></i> <span data-i18n="filter-1">التنبؤ بالإيرادات</span>
+                            </button>
+                            <button class="filter-btn" data-dataset="ai-accuracy">
+                                <i class="fa-solid fa-brain"></i> <span data-i18n="filter-2">دقة نماذج الذكاء الاصطناعي</span>
+                            </button>
+                            <button class="filter-btn" data-dataset="categories">
+                                <i class="fa-solid fa-pie-chart"></i> <span data-i18n="filter-3">تصنيف البيانات</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="kpi-grid">
+                        <div class="kpi-card">
+                            <div class="kpi-icon cyan-icon"><i class="fa-solid fa-money-bill-trend-up"></i></div>
+                            <div class="kpi-details">
+                                <span class="kpi-title" data-i18n="kpi1-title">الإيرادات المتوقعة (جنيه)</span>
+                                <span class="kpi-val" id="kpi-1">١.٢٥ م. جنيه</span>
+                                <span class="kpi-trend positive"><i class="fa-solid fa-arrow-trend-up"></i> <span data-i18n="kpi1-trend">+18.4% نمو متوقع</span></span>
+                            </div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-icon purple-icon"><i class="fa-solid fa-microchip"></i></div>
+                            <div class="kpi-details">
+                                <span class="kpi-title" data-i18n="kpi2-title">نسبة أتمتة البيانات بالذكاء الاصطناعي</span>
+                                <span class="kpi-val" id="kpi-2">94.2%</span>
+                                <span class="kpi-trend positive"><i class="fa-solid fa-bolt"></i> <span data-i18n="kpi2-trend">توفير ٨٠ ساعة عمل</span></span>
+                            </div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-icon emerald-icon"><i class="fa-solid fa-bullseye"></i></div>
+                            <div class="kpi-details">
+                                <span class="kpi-title" data-i18n="kpi3-title">دقة التنبؤ الإحصائي</span>
+                                <span class="kpi-val" id="kpi-3">96.8%</span>
+                                <span class="kpi-trend positive"><i class="fa-solid fa-shield-halved"></i> <span data-i18n="kpi3-trend">توجيه قرارات ممتاز</span></span>
+                            </div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-icon amber-icon"><i class="fa-solid fa-database"></i></div>
+                            <div class="kpi-details">
+                                <span class="kpi-title" data-i18n="kpi4-title">السجلات المعالجة في SQL</span>
+                                <span class="kpi-val" id="kpi-4">١.٢ م. سجل</span>
+                                <span class="kpi-trend positive"><i class="fa-solid fa-check-double"></i> <span data-i18n="kpi4-trend">بدون أخطاء</span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chart-wrapper">
+                        <canvas id="businessAnalyticsChart"></canvas>
+                    </div>
+
+                    <div class="dashboard-footer">
+                        <span><i class="fa-solid fa-circle-info"></i> <span data-i18n="dash-footer">يمكن النقر على الأزرار أعلاه لتحديث المؤشرات والرسومات البيانية وتجربة التفاعلية الحية.</span></span>
+                        <span class="tech-used-badges">
+                            <span class="mini-badge">Power BI Concept</span>
+                            <span class="mini-badge">Tableau Flow</span>
+                            <span class="mini-badge">Python Stats</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="section services-section" id="services">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag" data-i18n="svc-tag">ما يمكنني تقديمه لك</span>
+                    <h2 class="section-title" data-i18n="svc-title">الخدمات والحلول الاحترافية</h2>
+                    <p class="section-subtitle" data-i18n="svc-sub">خدمات متكاملة في تكنولوجيا المعلومات وتحليل البيانات والذكاء الاصطناعي</p>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card glass-card">
+                        <div class="service-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                        <h3 data-i18n="s1-title">لوحات تحكم تفاعلية (Dashboards)</h3>
+                        <p data-i18n="s1-desc">تصميم وبناء لوحات تحكم ديناميكية باستخدام Power BI و Tableau للربط المباشر ببيانات الشركة ومتابعة الأداء لحظياً.</p>
+                        <ul class="service-list">
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="s1-li1">ربط مصادر البيانات المتعددة</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="s1-li2">تقارير تفاعلية وسهلة القراءة</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card glass-card">
+                        <div class="service-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                        <h3 data-i18n="s2-title">استخلاص الرؤى وتوجيه قرارات الأعمال</h3>
+                        <p data-i18n="s2-desc">تنقيب البيانات الخام، استخراج الأنماط، وتقديم توصيات قابلة للتنفيذ لمساعدة الإدارة على اتخاذ قرارات دقيقة وصائبة.</p>
+                        <ul class="service-list">
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="s2-li1">تحليل بيانات الشركات الخام</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="s2-li2">تقديم رؤى مخصصة للنمو</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card glass-card">
+                        <div class="service-icon"><i class="fa-solid fa-brain"></i></div>
+                        <h3 data-i18n="s3-title">حلول الذكاء الاصطناعي والتنبؤ الإحصائي</h3>
+                        <p data-i18n="s3-desc">الاستفادة من التعلم الآلي وتوجيه وكيل الذكاء الاصطناعي (AI Agent) لأتمتة تصنيف البيانات المعقدة وتحليل الاتجاهات التاريخية العميقة.</p>
+                        <ul class="service-list">
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="s3-li1">أتمتة التصنيفات المعقدة</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="s3-li2">نماذج تنبؤ إحصائية دقيقة</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card glass-card">
+                        <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                        <h3 data-i18n="s4-title">تطوير واجهات الويب (Web UI)</h3>
+                        <p data-i18n="s4-desc">تصميم وتطوير واجهات ويب سريعة، تجاوبية، وجذابة باستخدام HTML, CSS, JavaScript لإبراز أعمالك وهويتك بشكل احترافي.</p>
+                        <ul class="service-list">
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="s4-li1">تصاميم داكنة وعصرية (Dark & Glass)</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="s4-li2">متوافقة مع كل الهواتف والشاشات</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact-section" id="contact">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag" data-i18n="contact-tag">تواصل مباشر وسريع</span>
+                    <h2 class="section-title"><span data-i18n="contact-title">تواصل مع المهندس</span> <span class="gradient-text">أحمد ذايد</span></h2>
+                    <p class="section-subtitle" data-i18n="contact-sub">يمكنك النقر مباشرة على رقم الهاتف للتحويل المباشر إلى الواتساب أو التليجرام، أو إرسال رسالة فورية</p>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-cards-column">
+                        <div class="contact-card glass-card highlight-phone-card">
+                            <div class="card-glow"></div>
+                            <div class="contact-icon phone-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                            <div class="contact-details">
+                                <span class="contact-label" data-i18n="phone-label">رقم الهاتف والتواصل المباشر</span>
+                                <h3 class="phone-number-display"><a href="tel:01227036251" class="phone-direct-link" title="اتصال هاتفي مباشر">01227036251</a></h3>
+                                <p class="contact-sub" data-i18n="phone-sub">اضغط على الأزرار بالأسفل للتحدث مباشرة عبر الواتساب أو التليجرام</p>
+                                <div class="direct-app-buttons">
+                                    <a href="https://wa.me/201227036251?text=مرحباً%20م.%20أحمد%20ذايد،%20أود%20التواصل%20معك" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-direct">
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                        <span data-i18n="btn-wa-direct">تحدث عبر الواتساب</span>
+                                    </a>
+                                    <a href="https://t.me/+201227036251" target="_blank" rel="noopener noreferrer" class="btn btn-telegram-direct">
+                                        <i class="fa-brands fa-telegram"></i>
+                                        <span data-i18n="btn-tg-direct">تحدث عبر التليجرام</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-card glass-card">
+                            <div class="contact-icon email-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+                            <div class="contact-details">
+                                <span class="contact-label" data-i18n="email-label">البريد الإلكتروني الرسمي</span>
+                                <a href="mailto:dhaydahmd549@gmail.com" class="email-link">dhaydahmd549@gmail.com</a>
+                                <p class="contact-sub" data-i18n="email-sub">يمكنك إرسال الاستفسارات والعروض التقديمية في أي وقت</p>
+                                <button class="btn btn-copy-email" id="copyEmailBtn" data-email="dhaydahmd549@gmail.com">
+                                    <i class="fa-solid fa-copy"></i> <span data-i18n="btn-copy">نسخ البريد الإلكتروني</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="contact-card glass-card">
+                            <div class="contact-icon location-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                            <div class="contact-details">
+                                <span class="contact-label" data-i18n="loc-label">الموقع الجغرافي</span>
+                                <h3 data-i18n="loc-title">مصر - كفر الشيخ - سيدي سالم</h3>
+                                <p class="contact-sub" data-i18n="loc-sub">خريج نظم معلومات الأعمال (BIS) | متاح للعمل الحر والوظائف عن بعد أو الميدانية</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-column">
+                        <form class="contact-form glass-card" id="contactForm" autocomplete="on">
+                            <!-- Security Honeypot Field for anti-spam bots -->
+                            <input type="text" name="_hp_security_check" id="hpSecurityCheck" style="display:none !important;" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                            <h3><i class="fa-solid fa-paper-plane"></i> <span data-i18n="form-title">أرسل رسالة مباشرة</span></h3>
+                            <p class="form-desc" data-i18n="form-desc">أدخل بياناتك وسيتم توجيه رسالتك للمهندس أحمد ذايد مباشرة</p>
+
+                            <div class="form-group">
+                                <label for="senderName"><i class="fa-solid fa-user"></i> <span data-i18n="lbl-name">الاسم الكامل</span></label>
+                                <input type="text" id="senderName" class="form-input" data-i18n-placeholder="ph-name" placeholder="مثال: أ. محمد علي" required maxlength="80" autocomplete="name">
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="senderPhone"><i class="fa-solid fa-phone"></i> <span data-i18n="lbl-phone">رقم الهاتف</span></label>
+                                    <input type="tel" id="senderPhone" class="form-input" data-i18n-placeholder="ph-phone" placeholder="010xxxxxxx" required maxlength="20" autocomplete="tel">
+                                </div>
+                                <div class="form-group">
+                                    <label for="senderEmail"><i class="fa-solid fa-at"></i> <span data-i18n="lbl-email">البريد الإلكتروني</span></label>
+                                    <input type="email" id="senderEmail" class="form-input" data-i18n-placeholder="ph-email" placeholder="example@domain.com" maxlength="100" autocomplete="email">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="messageSubject"><i class="fa-solid fa-heading"></i> <span data-i18n="lbl-subject">موضوع الرسالة</span></label>
+                                <select id="messageSubject" class="form-input">
+                                    <option data-i18n-option="opt-1">طلب مشروع تحليل بيانات و Power BI</option>
+                                    <option data-i18n-option="opt-2">طلب حلول ذكاء اصطناعي وأتمتة</option>
+                                    <option data-i18n-option="opt-3">طلب تطوير واجهة موقع ويب</option>
+                                    <option data-i18n-option="opt-4">طلب استشارة تكنولوجية</option>
+                                    <option data-i18n-option="opt-5">فرصة عمل / تواصل آخر</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="senderMessage"><i class="fa-solid fa-comment-dots"></i> <span data-i18n="lbl-msg">تفاصيل الرسالة</span></label>
+                                <textarea id="senderMessage" class="form-input textarea-input" rows="4" data-i18n-placeholder="ph-msg" placeholder="اكتب تفاصيل استفسارك أو مشروعك هنا..." required maxlength="2000"></textarea>
+                            </div>
+
+                            <div class="form-submit-buttons">
+                                <button type="submit" class="btn btn-primary-submit">
+                                    <i class="fa-solid fa-paper-plane"></i> <span data-i18n="btn-submit">إرسال الرسالة الآن</span>
+                                </button>
+                                <button type="button" class="btn btn-whatsapp-form" id="sendViaWhatsappBtn">
+                                    <i class="fa-brands fa-whatsapp"></i> <span data-i18n="btn-wa-form">إرسال مباشرة عبر الواتساب</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#hero" class="footer-logo">م. أحمد <span class="highlight">ذايد</span></a>
+                <p data-i18n="footer-p">مهندس نظم معلومات وتكنولوجيا المعلومات | خريج نظم معلومات الأعمال (BIS) | أخصائي تحليل البيانات والذكاء الاصطناعي</p>
+                <div class="footer-location">
+                    <i class="fa-solid fa-location-dot"></i> مصر - كفر الشيخ - سيدي سالم | <i class="fa-solid fa-phone"></i> 01227036251
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4 data-i18n="footer-links-h">روابط التنقل</h4>
+                <a href="#hero" data-i18n="footer-l1">الرئيسية</a>
+                <a href="#about" data-i18n="footer-l2">عن المهندس</a>
+                <a href="#skills" data-i18n="footer-l3">المهارات والتقنيات</a>
+                <a href="#projects" data-i18n="footer-l-proj">المشاريع والأعمال</a>
+                <a href="#analytics-demo" data-i18n="footer-l4">لوحة التحليلات الحية</a>
+                <a href="#contact" data-i18n="footer-l5">تواصل معي</a>
+            </div>
+            <div class="footer-social">
+                <h4 data-i18n="footer-social-h">التواصل السريع</h4>
+                <div class="social-icons">
+                    <a href="https://wa.me/201227036251" target="_blank" rel="noopener noreferrer" title="واتساب"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://t.me/+201227036251" target="_blank" rel="noopener noreferrer" title="تليجرام"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="mailto:dhaydahmd549@gmail.com" title="البريد الإلكتروني"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p data-i18n-html="footer-bottom">© 2026 جميع الحقوق محفوظة للمهندس <strong>أحمد ذايد</strong> | تم التطوير وفق أعلى معايير الويب وتحليل البيانات</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toast" class="toast-notification"></div>
+    <script src="script.js"></script>
+</body>
+</html>
