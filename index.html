@@ -44,6 +44,7 @@
                 <a href="#about" class="nav-link"><i class="fa-solid fa-user"></i> <span data-i18n="nav-about">عني</span></a>
                 <a href="#skills" class="nav-link"><i class="fa-solid fa-laptop-code"></i> <span data-i18n="nav-skills">المهارات</span></a>
                 <a href="#projects" class="nav-link"><i class="fa-solid fa-diagram-project"></i> <span data-i18n="nav-projects">المشاريع والأعمال</span></a>
+                <a href="#certificates" class="nav-link"><i class="fa-solid fa-award"></i> <span data-i18n="nav-certificates">الشهادات</span></a>
                 <a href="#analytics-demo" class="nav-link"><i class="fa-solid fa-chart-pie"></i> <span data-i18n="nav-analytics">لوحة التحليلات</span></a>
                 <a href="#services" class="nav-link"><i class="fa-solid fa-briefcase"></i> <span data-i18n="nav-services">الخدمات</span></a>
                 <a href="#contact" class="nav-link"><i class="fa-solid fa-envelope"></i> <span data-i18n="nav-contact">تواصل معي</span></a>
@@ -515,6 +516,151 @@ print(<span class="code-string">"✅ Actionable Insights Generated!"</span>)</co
             </div>
         </section>
 
+        <!-- Certificates & Accreditations Section -->
+        <section class="section certificates-section" id="certificates">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag" data-i18n="cert-tag">التأهيل والاعتماد المهني</span>
+                    <h2 class="section-title"><span data-i18n="cert-title">الشهادات المهنية و</span> <span class="gradient-text" data-i18n="cert-title-hl">الاعتمادات الموثقة</span></h2>
+                    <p class="section-subtitle" data-i18n="cert-sub">توثيق رسمي ومعتمد للمسارات التقنية والمؤهلات الرقمية الصادرة من كبرى المؤسسات التعليمية</p>
+                    <div class="title-underline"></div>
+                </div>
+
+                <!-- Featured Certificate Card -->
+                <div class="certificate-featured-card glass-card">
+                    <div class="cert-badge-bar">
+                        <div class="cert-status-group">
+                            <span class="status-badge verified-cert-badge">
+                                <i class="fa-solid fa-circle-check"></i> <span data-i18n="cert-status">شهادة إتمام معتمدة وموثقة (Verified Certificate)</span>
+                            </span>
+                            <span class="cert-series-badge">
+                                <i class="fa-solid fa-award"></i> <span>ICDL-Base Series</span>
+                            </span>
+                        </div>
+                        <div class="cert-issuer-brand">
+                            <span class="issuer-org"><i class="fa-solid fa-building-columns"></i> <span data-i18n="cert-org-edraak">منصة إدراك | مبادرة مؤسسة الملكة رانيا للتعليم والتنمية</span></span>
+                        </div>
+                    </div>
+
+                    <div class="certificate-main-grid">
+                        <!-- Visual Preview Column -->
+                        <div class="cert-visual-col">
+                            <div class="cert-frame">
+                                <div class="cert-frame-header">
+                                    <div class="cert-frame-dots">
+                                        <span class="frame-dot close"></span>
+                                        <span class="frame-dot min"></span>
+                                        <span class="frame-dot max"></span>
+                                    </div>
+                                    <span class="cert-frame-label"><i class="fa-solid fa-file-shield"></i> EDRAAK_CERTIFICATE_VERIFIED.pdf</span>
+                                    <span class="cert-frame-tag"><i class="fa-solid fa-qrcode"></i> QR Verified</span>
+                                </div>
+                                <div class="cert-image-container" id="certImageContainer" role="button" tabindex="0" title="انقر للمعاينة والتكبير بدقة فائقة">
+                                    <img src="assets/certificates/edraak-computer-essentials.png" alt="شهادة أساسيات الحاسوب - المهندس أحمد ذايد" class="cert-image" loading="lazy">
+                                    <div class="cert-image-overlay">
+                                        <div class="overlay-content">
+                                            <span class="overlay-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                                            <span class="overlay-text" data-i18n="cert-overlay-text">انقر للمعاينة والتكبير بدقة فائقة (HD)</span>
+                                        </div>
+                                    </div>
+                                    <span class="cert-watermark-chip"><i class="fa-solid fa-ribbon"></i> Level Completion</span>
+                                </div>
+                            </div>
+
+                            <!-- Fast Action Bar under the Certificate Preview -->
+                            <div class="cert-actions-bar">
+                                <button type="button" class="btn btn-cert-zoom" id="openCertModalBtn">
+                                    <i class="fa-solid fa-expand"></i> <span data-i18n="btn-cert-zoom">معاينة مكبرة (HD)</span>
+                                </button>
+                                <a href="assets/certificates/edraak-computer-essentials.pdf" download="شهادة_أساسيات_الحاسوب_أحمد_ذايد.pdf" class="btn btn-cert-pdf" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-solid fa-file-pdf"></i> <span data-i18n="btn-cert-pdf">تحميل الشهادة الرسمية (PDF)</span>
+                                </a>
+                                <a href="assets/certificates/edraak-computer-essentials.png" target="_blank" rel="noopener noreferrer" class="btn btn-cert-external" title="فتح الصورة بنافذة خارجية">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Certificate Information & Details Column -->
+                        <div class="cert-info-col">
+                            <div class="cert-title-header">
+                                <div class="cert-id-tag">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                    <span data-i18n="cert-badge-type">شهادة إتمام تخصصي (Level Completion)</span>
+                                </div>
+                                <h3 class="cert-course-name" data-i18n="cert-course-title">أساسيات الحاسوب (Computer Essentials)</h3>
+                                <p class="cert-recipient-name">
+                                    <i class="fa-solid fa-user-check"></i> <span data-i18n="cert-recipient-lbl">المُجاز بالشهادة:</span> 
+                                    <strong class="highlight-name">أحمد السيد رجب علي عبد النبي زايد</strong>
+                                    <span class="badge-mini-verified" title="موثق"><i class="fa-solid fa-check"></i></span>
+                                </p>
+                            </div>
+
+                            <p class="cert-description-text" data-i18n-html="cert-desc">
+                                دورة تخصصية معتمدة تم إتمامها بنجاح عبر <strong>منصة إدراك (EDRAAK)</strong> التابعة لمؤسسة الملكة رانيا للتعليم والتنمية. المساق يمثل حجر الأساس في سلسلة <strong>الرخصة الدولية لقيادة الحاسوب (ICDL-Base)</strong>، ويغطي المفاهيم الجوهرية والتقنية لتكنولوجيا الحاسوب والتعامل الاحترافي مع كافة مكوناته.
+                            </p>
+
+                            <!-- Modules & Skills Covered Grid -->
+                            <div class="cert-skills-grid">
+                                <div class="cert-skill-box">
+                                    <div class="box-icon-wrap cyan-icon"><i class="fa-solid fa-microchip"></i></div>
+                                    <div>
+                                        <h4 data-i18n="c-skill-1-t">عتاد الحاسوب والمكونات المادية</h4>
+                                        <p data-i18n="c-skill-1-d">المكونات الرئيسية، المعالجات، ووحدات الإدخال والإخراج والتحكم العام بنظام الحاسوب.</p>
+                                    </div>
+                                </div>
+                                <div class="cert-skill-box">
+                                    <div class="box-icon-wrap purple-icon"><i class="fa-solid fa-hard-drive"></i></div>
+                                    <div>
+                                        <h4 data-i18n="c-skill-2-t">التخزين وضغط البيانات والملفات</h4>
+                                        <p data-i18n="c-skill-2-d">إدارة وسائط التخزين، هياكل الملفات، خوارزميات الضغط، وسياسات الحفظ والنسخ الاحتياطي.</p>
+                                    </div>
+                                </div>
+                                <div class="cert-skill-box">
+                                    <div class="box-icon-wrap emerald-icon"><i class="fa-solid fa-network-wired"></i></div>
+                                    <div>
+                                        <h4 data-i18n="c-skill-3-t">الشبكات والاتصال والإنترنت</h4>
+                                        <p data-i18n="c-skill-3-d">بنية الشبكات السلكية واللاسلكية، بروتوكولات الاتصال، ومفاهيم مشاركة الموارد والبيانات.</p>
+                                    </div>
+                                </div>
+                                <div class="cert-skill-box">
+                                    <div class="box-icon-wrap amber-icon"><i class="fa-solid fa-shield-virus"></i></div>
+                                    <div>
+                                        <h4 data-i18n="c-skill-4-t">الأمن الرقمي وحماية النظم</h4>
+                                        <p data-i18n="c-skill-4-d">مبادئ الأمان السيبراني، مكافحة البرمجيات الخبيثة، وحماية البيانات وأنظمة التشغيل.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Official Metadata Strip -->
+                            <div class="cert-meta-strip">
+                                <div class="meta-item">
+                                    <span class="meta-label" data-i18n="meta-issuer-lbl"><i class="fa-solid fa-school"></i> الجهة المانحة</span>
+                                    <span class="meta-value" data-i18n="meta-issuer-val">منصة إدراك (مؤسسة الملكة رانيا)</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label" data-i18n="meta-instructor-lbl"><i class="fa-solid fa-chalkboard-user"></i> المدرب المعتمد</span>
+                                    <span class="meta-value" data-i18n="meta-instructor-val">هبة أبو عدوان (Hiba abu Odwan)</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label" data-i18n="meta-hours-lbl"><i class="fa-solid fa-clock"></i> ساعات التدريب</span>
+                                    <span class="meta-value" data-i18n="meta-hours-val">ساعتان تدريب تفاعلي مكثف</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label" data-i18n="meta-date-lbl"><i class="fa-solid fa-calendar-check"></i> تاريخ الإصدار</span>
+                                    <span class="meta-value">17/11/2026</span>
+                                </div>
+                                <div class="meta-item highlight-meta">
+                                    <span class="meta-label" data-i18n="meta-verify-lbl"><i class="fa-solid fa-qrcode"></i> التوثيق والتحقق</span>
+                                    <span class="meta-value" data-i18n="meta-verify-val">كود QR رسمي مشفر للتحقق الفوري</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Analytics Dashboard Section -->
         <section class="section analytics-section" id="analytics-demo">
             <div class="container">
@@ -774,6 +920,7 @@ print(<span class="code-string">"✅ Actionable Insights Generated!"</span>)</co
                 <a href="#about" data-i18n="footer-l2">عن المهندس</a>
                 <a href="#skills" data-i18n="footer-l3">المهارات والتقنيات</a>
                 <a href="#projects" data-i18n="footer-l-proj">المشاريع والأعمال</a>
+                <a href="#certificates" data-i18n="footer-l-cert">الشهادات والاعتمادات</a>
                 <a href="#analytics-demo" data-i18n="footer-l4">لوحة التحليلات الحية</a>
                 <a href="#contact" data-i18n="footer-l5">تواصل معي</a>
             </div>
@@ -792,6 +939,47 @@ print(<span class="code-string">"✅ Actionable Insights Generated!"</span>)</co
             </div>
         </div>
     </footer>
+
+    <!-- Certificate Lightbox Modal -->
+    <div class="cert-modal" id="certModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="معاينة الشهادة المعتمدة">
+        <div class="cert-modal-backdrop" id="certModalBackdrop"></div>
+        <div class="cert-modal-container">
+            <div class="cert-modal-header">
+                <div class="cert-modal-title">
+                    <div class="cert-modal-icon"><i class="fa-solid fa-award"></i></div>
+                    <div>
+                        <h4 data-i18n="modal-cert-title">شهادة مساق: أساسيات الحاسوب (Computer Essentials)</h4>
+                        <span class="cert-modal-sub" data-i18n="modal-cert-sub">منصة إدراك • ICDL-Base Series • م. أحمد ذايد</span>
+                    </div>
+                </div>
+                <div class="cert-modal-actions">
+                    <a href="assets/certificates/edraak-computer-essentials.pdf" download="شهادة_أساسيات_الحاسوب_أحمد_ذايد.pdf" class="btn btn-modal-action" title="تحميل ملف PDF الرسمي">
+                        <i class="fa-solid fa-file-pdf"></i> <span class="hide-mobile" data-i18n="btn-download-pdf">تحميل PDF</span>
+                    </a>
+                    <a href="assets/certificates/edraak-computer-essentials.png" target="_blank" rel="noopener noreferrer" class="btn btn-modal-action" title="فتح الصورة بالحجم الكامل">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                    <button class="btn btn-modal-close" id="closeCertModalBtn" aria-label="إغلاق النافذة">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="cert-modal-body">
+                <div class="cert-modal-image-wrapper">
+                    <img src="assets/certificates/edraak-computer-essentials.png" alt="شهادة إتمام دورة أساسيات الحاسوب - إدراك - م. أحمد ذايد" class="cert-modal-img" id="certModalImg">
+                </div>
+            </div>
+            <div class="cert-modal-footer">
+                <div class="modal-footer-badge">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span data-i18n="modal-footer-verified">شهادة إتمام رسمية موثقة ومزودة بكود QR للتحقق المباشر من الاعتماد الأكاديمي</span>
+                </div>
+                <div class="modal-footer-meta">
+                    <span data-i18n="modal-date">تاريخ الإصدار: 17/11/2026</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div id="toast" class="toast-notification"></div>
     <script src="script.js"></script>

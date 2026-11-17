@@ -593,6 +593,48 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // =========================================================
+    // 13.5. Certificate Lightbox Modal Interactivity
+    // =========================================================
+    const certModal = document.getElementById('certModal');
+    const openCertModalBtn = document.getElementById('openCertModalBtn');
+    const certImageContainer = document.getElementById('certImageContainer');
+    const closeCertModalBtn = document.getElementById('closeCertModalBtn');
+    const certModalBackdrop = document.getElementById('certModalBackdrop');
+
+    function openCertModal() {
+        if (!certModal) return;
+        certModal.classList.add('active');
+        certModal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('modal-open');
+    }
+
+    function closeCertModal() {
+        if (!certModal) return;
+        certModal.classList.remove('active');
+        certModal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('modal-open');
+    }
+
+    if (openCertModalBtn) openCertModalBtn.addEventListener('click', openCertModal);
+    if (certImageContainer) {
+        certImageContainer.addEventListener('click', openCertModal);
+        certImageContainer.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openCertModal();
+            }
+        });
+    }
+    if (closeCertModalBtn) closeCertModalBtn.addEventListener('click', closeCertModal);
+    if (certModalBackdrop) certModalBackdrop.addEventListener('click', closeCertModal);
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && certModal && certModal.classList.contains('active')) {
+            closeCertModal();
+        }
+    });
+
+    // =========================================================
     // 14. Internationalization (i18n) — Arabic / English Switcher
     // =========================================================
     const translations = {
@@ -602,6 +644,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "nav-about": "عني",
             "nav-skills": "المهارات",
             "nav-projects": "المشاريع والأعمال",
+            "nav-certificates": "الشهادات",
             "nav-analytics": "لوحة التحليلات",
             "nav-services": "الخدمات",
             "nav-contact": "تواصل معي",
@@ -691,6 +734,41 @@ document.addEventListener('DOMContentLoaded', () => {
             "proj-stack-lbl": "التقنيات المستخدمة في المشروع:",
             "btn-open-proj": "تشغيل المنصة / معاينة حية",
             "btn-discuss-proj": "طلب نظام مماثل",
+            "cert-tag": "التأهيل والاعتماد المهني",
+            "cert-title": "الشهادات المهنية و",
+            "cert-title-hl": "الاعتمادات الموثقة",
+            "cert-sub": "توثيق رسمي ومعتمد للمسارات التقنية والمؤهلات الرقمية الصادرة من كبرى المؤسسات التعليمية",
+            "cert-status": "شهادة إتمام معتمدة وموثقة (Verified Certificate)",
+            "cert-org-edraak": "منصة إدراك | مبادرة مؤسسة الملكة رانيا للتعليم والتنمية",
+            "cert-overlay-text": "انقر للمعاينة والتكبير بدقة فائقة (HD)",
+            "btn-cert-zoom": "معاينة مكبرة (HD)",
+            "btn-cert-pdf": "تحميل الشهادة الرسمية (PDF)",
+            "cert-badge-type": "شهادة إتمام تخصصي (Level Completion)",
+            "cert-course-title": "أساسيات الحاسوب (Computer Essentials)",
+            "cert-recipient-lbl": "المُجاز بالشهادة:",
+            "cert-desc": "دورة تخصصية معتمدة تم إتمامها بنجاح عبر <strong>منصة إدراك (EDRAAK)</strong> التابعة لمؤسسة الملكة رانيا للتعليم والتنمية. المساق يمثل حجر الأساس في سلسلة <strong>الرخصة الدولية لقيادة الحاسوب (ICDL-Base)</strong>، ويغطي المفاهيم الجوهرية والتقنية لتكنولوجيا الحاسوب والتعامل الاحترافي مع كافة مكوناته.",
+            "c-skill-1-t": "عتاد الحاسوب والمكونات المادية",
+            "c-skill-1-d": "المكونات الرئيسية، المعالجات، ووحدات الإدخال والإخراج والتحكم العام بنظام الحاسوب.",
+            "c-skill-2-t": "التخزين وضغط البيانات والملفات",
+            "c-skill-2-d": "إدارة وسائط التخزين، هياكل الملفات، خوارزميات الضغط، وسياسات الحفظ والنسخ الاحتياطي.",
+            "c-skill-3-t": "الشبكات والاتصال والإنترنت",
+            "c-skill-3-d": "بنية الشبكات السلكية واللاسلكية، بروتوكولات الاتصال، ومفاهيم مشاركة الموارد والبيانات.",
+            "c-skill-4-t": "الأمن الرقمي وحماية النظم",
+            "c-skill-4-d": "مبادئ الأمان السيبراني، مكافحة البرمجيات الخبيثة، وحماية البيانات وأنظمة التشغيل.",
+            "meta-issuer-lbl": "الجهة المانحة",
+            "meta-issuer-val": "منصة إدراك (مؤسسة الملكة رانيا)",
+            "meta-instructor-lbl": "المدرب المعتمد",
+            "meta-instructor-val": "هبة أبو عدوان (Hiba abu Odwan)",
+            "meta-hours-lbl": "ساعات التدريب",
+            "meta-hours-val": "ساعتان تدريب تفاعلي مكثف",
+            "meta-date-lbl": "تاريخ الإصدار",
+            "meta-verify-lbl": "التوثيق والتحقق",
+            "meta-verify-val": "كود QR رسمي مشفر للتحقق الفوري",
+            "modal-cert-title": "شهادة مساق: أساسيات الحاسوب (Computer Essentials)",
+            "modal-cert-sub": "منصة إدراك • ICDL-Base Series • م. أحمد ذايد",
+            "btn-download-pdf": "تحميل PDF",
+            "modal-footer-verified": "شهادة إتمام رسمية موثقة ومزودة بكود QR للتحقق المباشر من الاعتماد الأكاديمي",
+            "modal-date": "تاريخ الإصدار: 17/11/2026",
             "analytics-tag": "استعراض حي ملموس",
             "analytics-title": "لوحة تحليلات البيانات التفاعلية (BI Demo)",
             "analytics-sub": "نموذج حي يستعرض طريقة تحويل بيانات الشركات إلى رسومات بيانية ومؤشرات أداء لتوجيه القرارات",
@@ -763,6 +841,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "footer-l2": "عن المهندس",
             "footer-l3": "المهارات والتقنيات",
             "footer-l-proj": "المشاريع والأعمال",
+            "footer-l-cert": "الشهادات والاعتمادات",
             "footer-l4": "لوحة التحليلات الحية",
             "footer-l5": "تواصل معي",
             "footer-social-h": "التواصل السريع",
@@ -774,6 +853,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "nav-about": "About",
             "nav-skills": "Skills",
             "nav-projects": "Projects & Works",
+            "nav-certificates": "Certificates",
             "nav-analytics": "Analytics Demo",
             "nav-services": "Services",
             "nav-contact": "Contact",
@@ -863,6 +943,41 @@ document.addEventListener('DOMContentLoaded', () => {
             "proj-stack-lbl": "Technologies Used in Project:",
             "btn-open-proj": "Launch Platform / Live Preview",
             "btn-discuss-proj": "Request Similar System",
+            "cert-tag": "Accredited Qualifications",
+            "cert-title": "Professional Credentials &",
+            "cert-title-hl": "Verified Certificates",
+            "cert-sub": "Official, verified documentation for accredited technical pathways and digital competencies from leading educational institutions",
+            "cert-status": "Verified Completion Certificate",
+            "cert-org-edraak": "Edraak Platform | Queen Rania Foundation for Education & Development",
+            "cert-overlay-text": "Click to Inspect & Zoom in Ultra HD",
+            "btn-cert-zoom": "HD Zoom Preview",
+            "btn-cert-pdf": "Download Official PDF",
+            "cert-badge-type": "Level Completion Certificate",
+            "cert-course-title": "Computer Essentials",
+            "cert-recipient-lbl": "Certified to:",
+            "cert-desc": "An accredited specialized course successfully completed via <strong>Edraak (EDRAAK)</strong>, an initiative of Queen Rania Foundation. The course forms the foundational cornerstone of the <strong>International Computer Driving Licence (ICDL-Base)</strong> series, covering core technical computing concepts and professional control over computer systems.",
+            "c-skill-1-t": "Computer Hardware & Components",
+            "c-skill-1-d": "Core hardware components, processors, I/O devices, and general system peripheral control.",
+            "c-skill-2-t": "Storage & Data Compression",
+            "c-skill-2-d": "Storage media management, file structures, data compression algorithms, and backup policies.",
+            "c-skill-3-t": "Networks & Internet Connectivity",
+            "c-skill-3-d": "Wired & wireless network topologies, communication protocols, and resource sharing fundamentals.",
+            "c-skill-4-t": "Digital Security & Protection",
+            "c-skill-4-d": "Cybersecurity essentials, anti-malware safeguards, data encryption, and operating system protection.",
+            "meta-issuer-lbl": "Issuing Authority",
+            "meta-issuer-val": "Edraak (Queen Rania Foundation)",
+            "meta-instructor-lbl": "Certified Instructor",
+            "meta-instructor-val": "Hiba abu Odwan",
+            "meta-hours-lbl": "Training Hours",
+            "meta-hours-val": "2 Hours Intensive Interactive Training",
+            "meta-date-lbl": "Issue Date",
+            "meta-verify-lbl": "Credential Verification",
+            "meta-verify-val": "Official encrypted QR code for instant verification",
+            "modal-cert-title": "Course Certificate: Computer Essentials",
+            "modal-cert-sub": "Edraak Platform • ICDL-Base Series • Eng. Ahmed Zaid",
+            "btn-download-pdf": "Download PDF",
+            "modal-footer-verified": "Official certified completion credential with live verifiable QR code under Edraak and Queen Rania Foundation",
+            "modal-date": "Issued on: 17/11/2026",
             "analytics-tag": "Live Interactive Demo",
             "analytics-title": "Interactive BI Analytics Dashboard",
             "analytics-sub": "Live proof of concept demonstrating how raw corporate data transforms into strategic charts and KPIs",
@@ -935,6 +1050,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "footer-l2": "About",
             "footer-l3": "Skills",
             "footer-l-proj": "Projects",
+            "footer-l-cert": "Certifications",
             "footer-l4": "Live BI Demo",
             "footer-l5": "Contact",
             "footer-social-h": "Quick Connect",
